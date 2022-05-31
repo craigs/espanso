@@ -1,0 +1,18 @@
+matches:
+  - trigger: "//vanilla"
+    replace: |
+      import { globalStyle, style } from '@vanilla-extract/css'
+      import { vars } from 'styles'
+
+      const container = style({
+        border: `1px solid ${vars.color.black}`
+      })
+
+      globalStyle(`${container}:hover`, {
+        background: 'transparent'
+      })
+
+
+      export const Styles = {
+        container
+      }

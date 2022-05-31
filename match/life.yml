@@ -1,0 +1,9 @@
+matches:
+  - trigger: "//sig"
+    replace: |
+      Thank you,
+      Craig
+
+      ---
+      LinkedIn: https://www.linkedin.com/in/craigs0/
+      twitter: https://twitter.com/@craigs_io

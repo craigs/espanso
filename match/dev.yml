@@ -1,0 +1,13 @@
+matches:
+  - trigger: "//pr"
+    replace: |
+      ## What does this PR do?
+
+      ## Running tests
+      - `npm test`
+
+      ## Screenshots
+
+      ## Related issues
+
+      - []()

@@ -1,0 +1,35 @@
+matches:
+  - trigger: "//desc"
+    replace: |
+      import { Component } from 'components'
+
+      describe('Component', () => {
+        beforeAll(() => {
+          // test environment setup
+        })
+
+        beforeEach(() => {
+          // test setup
+        })
+
+        afterAll(() => {
+          // test environment teardown
+        })
+
+        afterEach(() => {
+          // test teardown
+        })
+
+        test('renders', () => {
+          const { getByTestId } = render(<Component />)
+          expect(getByTestId('component')).toBeDefined()
+        })
+      })
+
+  - trigger: "//test"
+    replace: |
+      test('renders', () => {
+        const { getByRole, getByTestId } = render(<Component />)
+        expect(getByTestId('component')).toBeDefined()
+        expect(getByRole('button')).toBeDefined()
+      })

@@ -1,0 +1,21 @@
+matches:
+  - trigger: "//fc"
+    replace: |
+      import React, { FC } from 'react'
+
+      import { Styles } from './index.css'
+
+      interface {{form.name}}Props {
+        name: string
+      }
+
+      export const {{form.name}}: FC<{{form.name}}Props> = ({ name }) => (
+        <div className={Styles.container} data-testid='{{form.name}}'>
+          {name}
+        </div>
+      )
+    vars:
+      - name: "form"
+        type: form
+        params:
+          layout: "Component name: [[name]]"

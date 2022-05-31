@@ -1,0 +1,22 @@
+matches:
+  - trigger: "//page"
+    replace: |
+      import { GetServerSideProps, NextPage } from 'next'
+      import React from 'react'
+      import { Component } from 'components'
+
+      export interface PageProperties {
+        name: string
+      }
+
+      const Page: NextPage<PageProperties> = props => <Component {...props} />
+
+      export const getServerSideProps: GetServerSideProps = context => {
+        return {
+          props: {
+            name: ''
+          }
+        }
+      }
+
+      export default Page
